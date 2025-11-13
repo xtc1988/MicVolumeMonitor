@@ -111,12 +111,6 @@
                                 CornerRadius="6"
                                 HorizontalAlignment="Left"
                                 Width="0"/>
-
-                        <Border x:Name="LimitMarker"
-                                Width="2"
-                                Background="#374151"
-                                HorizontalAlignment="Left"
-                                Margin="0"/>
                     </Grid>
 
                     <Grid Margin="0,0,0,24">
