@@ -42,8 +42,7 @@ public partial class MainWindow : Window
         // UIを設定値で初期化
         InitializeUIFromSettings();
 
-        // メーターバーとリミットマーカーを初期化
-        UpdateLimitMarker();
+        // アクティビティインジケーターを初期化
         UpdateActivityIndicator(false);
 
         Console.WriteLine("[MainWindow] 初期化が完了しました");
@@ -253,7 +252,6 @@ public partial class MainWindow : Window
 
         currentThreshold = (float)e.NewValue;
         ThresholdValueText.Text = currentThreshold.ToString("F0");
-        UpdateLimitMarker();
         UpdateInfoText();
         UpdateThresholdDescription();
 
@@ -469,25 +467,6 @@ public partial class MainWindow : Window
                 isExceeding ? "#EF4444" : "#3B82F6"
             )
         );
-    }
-
-    /// <summary>
-    /// リミットマーカーの位置を更新
-    /// </summary>
-    private void UpdateLimitMarker()
-    {
-        // 閾値を0-120dBの範囲でパーセンテージに変換
-        float percentage = Math.Clamp(currentThreshold / 120f, 0f, 1f);
-
-        // リミットマーカーの位置を設定
-        if (LimitMarker.Parent is Grid parentGrid)
-        {
-            double maxWidth = parentGrid.ActualWidth;
-            if (maxWidth > 0)
-            {
-                LimitMarker.Margin = new Thickness(maxWidth * percentage, 0, 0, 0);
-            }
-        }
     }
 
     /// <summary>
