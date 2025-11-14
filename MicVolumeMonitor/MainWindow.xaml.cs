@@ -523,7 +523,7 @@ public partial class MainWindow : Window
     private void UpdateInfoText()
     {
         string peakText = peakLevel > 0 ? $"{peakLevel:F0}dB" : "--dB";
-        InfoText.Text = $"上限: {currentThreshold:F0}dB / ピーク: {peakText}";
+        InfoText.Text = $"監視音量: {currentThreshold:F0}dB / ピーク: {peakText}";
     }
 
     /// <summary>

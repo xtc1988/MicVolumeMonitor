@@ -95,7 +95,7 @@
                             </StackPanel>
 
                             <TextBlock x:Name="InfoText"
-                                       Text="上限: 80dB / ピーク: --dB"
+                                       Text="監視音量: 80dB / ピーク: --dB"
                                        FontSize="13"
                                        Foreground="#6B7280"
                                        TextAlignment="Center"/>
@@ -121,7 +121,7 @@
                         </Grid.RowDefinitions>
 
                         <Grid Grid.Row="0" Margin="0,0,0,8">
-                            <TextBlock Text="音量上限"
+                            <TextBlock Text="監視音量"
                                        FontSize="13"
                                        Foreground="#111827"
                                        HorizontalAlignment="Left"/>
@@ -214,7 +214,7 @@
                                        FontSize="16"
                                        Foreground="#DC2626"
                                        Margin="0,0,8,0"/>
-                            <TextBlock Text="音量が上限を超えています"
+                            <TextBlock Text="音量が監視音量を超えています"
                                        FontSize="13"
                                        Foreground="#991B1B"/>
                         </StackPanel>
